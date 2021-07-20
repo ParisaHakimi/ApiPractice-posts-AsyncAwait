@@ -23,6 +23,13 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.post:hover {
+    background-color: #666;
+    color: white;
 }
 
 .post h2,
@@ -47,4 +54,39 @@
     to {
         transform: rotate(360deg);
     }
+}
+
+@media (max-width:940px) {
+    .post {
+        width: 48%;
+    }
+}
+
+@media (max-width:600px) {
+    .post {
+        width: 90%;
+    }
+    .wrapper {
+        justify-content: center;
+    }
+}
+
+.wrapper .post * {
+    pointer-events: none;
+}
+
+.singlePost {
+    text-align: center;
+    border: 1px solid #ccc;
+    margin: 50px auto;
+}
+
+.singlePost p {
+    margin: 1rem 0;
+}
+
+.show-all {
+    padding: .5rem;
+    margin-bottom: 1rem;
+    background-color: rgba(30, 143, 255, 0.5);
 }
